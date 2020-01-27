@@ -1,0 +1,29 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public class Ex4 {
+
+	public static void main(String[] args) throws SQLException {
+		Connection conn =DriverManager.getConnection("jdbc:oracle:thin:@coestudb.qu.edu.qa:1521/STUD.qu.edu.qa","ha1401812","ha1401812");
+		PreparedStatement stmtDept=conn.prepareStatement("insert into dept (deptno, dname, loc) values (?,?,?)");
+		PreparedStatement stmtEmp=conn.prepareStatement("insert into emp (empno, ename, sal, deptno) values (?,?,?,?)");
+		
+		stmtDept.setInt(1,70);
+		stmtDept.setString(2,"HR");
+		stmtDept.setString(3,"DOHA");
+		stmtDept.executeUpdate();
+		
+
+		stmtEmp.setInt(1,777);
+		stmtEmp.setString(2,"Naser");
+		stmtEmp.setInt(3,3000);
+		stmtEmp.setInt(4,70);
+		stmtEmp.executeUpdate();
+		
+		
+
+	}
+
+}

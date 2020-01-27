@@ -1,0 +1,12 @@
+
+public class Employee {
+int empno;
+		String name;
+		double sal;
+	public static void main(String[] args) {
+		
+		
+
+	}
+
+}

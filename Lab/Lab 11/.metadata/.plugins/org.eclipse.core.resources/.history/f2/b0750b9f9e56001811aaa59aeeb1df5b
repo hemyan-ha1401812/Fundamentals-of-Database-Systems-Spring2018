@@ -1,0 +1,90 @@
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JMenuBar;
+import javax.swing.JMenu;
+import javax.swing.JMenuItem;
+
+public class Menus extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Menus frame = new Menus();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public Menus() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		
+		JMenuBar menuBar = new JMenuBar();
+		setJMenuBar(menuBar);
+		
+		JMenu mnNew = new JMenu("New");
+		menuBar.add(mnNew);
+		
+		JMenuItem mntmEmployee = new JMenuItem("Employee");
+		mntmEmployee.addActionListener(new ActionListener() {
+		public void actionPreformed(ActionEvent e){
+			
+		}
+			
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+ 		
+		mnNew.add(mntmEmployee);
+		
+		JMenuItem mntmDepartment = new JMenuItem("Department");
+		mnNew.add(mntmDepartment);
+		
+		JMenuItem mntmGrade = new JMenuItem("Grade");
+		mnNew.add(mntmGrade);
+		
+		JMenu mnUpdate = new JMenu("Update");
+		menuBar.add(mnUpdate);
+		
+		JMenuItem mntmEmployee_1 = new JMenuItem("Employee");
+		mnUpdate.add(mntmEmployee_1);
+		
+		JMenuItem mntmDepartment_1 = new JMenuItem("Department");
+		mnUpdate.add(mntmDepartment_1);
+		
+		JMenuItem mntmGrade_1 = new JMenuItem("Grade");
+		mnUpdate.add(mntmGrade_1);
+		
+		JMenu mnRemove = new JMenu("Remove");
+		menuBar.add(mnRemove);
+		
+		JMenu mnEmployee = new JMenu("Employee");
+		mnRemove.add(mnEmployee);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+	}
+}
