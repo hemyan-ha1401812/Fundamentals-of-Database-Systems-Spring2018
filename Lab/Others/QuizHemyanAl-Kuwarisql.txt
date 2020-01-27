@@ -1,0 +1,15 @@
+-- Hemyan AL-Kuwari 201401812
+--Q1
+select deptno, count(*) from emp group by DEPTNO having count(deptno)>=4;
+
+--Q2
+select ename emmployee, sal monthly_salary from emp where deptno=20 or deptno= 30 and sal between 5000 and 12000;
+
+--Q3
+select ename, sal , comm from emp order by sal desc, nvl(comm,0)desc;
+
+--Q4
+select max(sal)-min(sal) Difference from emp;
+
+--Q5
+select * from emp where ename like '%A%';

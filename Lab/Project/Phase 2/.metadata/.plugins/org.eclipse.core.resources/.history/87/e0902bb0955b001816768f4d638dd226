@@ -1,0 +1,14 @@
+import java.util.ArrayList;
+
+import javax.swing.table.AbstractTableModel;
+
+public class bankAccountTable {
+	private ArrayList<bankAccount> bAcc;
+	private String columnNames[]={"bName","Amount","accNum"};
+	
+	public bankAccountTable(ArrayList<Employee> bAcc) {
+		this.bAcc = bAcc;
+		System.out.println(bAcc.size());
+	}
+	
+}

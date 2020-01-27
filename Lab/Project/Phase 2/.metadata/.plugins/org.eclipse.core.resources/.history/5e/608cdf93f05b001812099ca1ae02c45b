@@ -1,0 +1,19 @@
+import java.awt.event.ActionEvent;
+import java.util.ArrayList;
+
+import javax.swing.JOptionPane;
+
+public class Test {
+
+	public static void main(String[] args) {
+
+		public void actionPerformed(ActionEvent arg0) {
+			if("Exit".equals(arg0.getActionCommand())){
+		int dButton = JOptionPane.YES_NO_OPTION;
+        JOptionPane.showConfirmDialog (null, "Would You Like to Exit?","Warning",dButton);
+
+        if(dButton == JOptionPane.YES_OPTION){
+           System.exit(NORMAL);
+	}}}
+
+}}

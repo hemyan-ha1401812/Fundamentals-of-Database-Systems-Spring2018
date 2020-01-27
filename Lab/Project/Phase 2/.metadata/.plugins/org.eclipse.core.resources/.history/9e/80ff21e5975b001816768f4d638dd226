@@ -1,0 +1,66 @@
+
+import java.sql.*;
+
+import javax.swing.JOptionPane;
+
+
+public class Bank_Acc_Operation {
+	Connection conn;
+	Statement stmt;
+	public Bank_Acc_Operation() {
+		try {
+		Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@coestudb.qu.edu.qa:1521/STUD.qu.edu.qa","ha1401812","ha1401812");
+
+			stmt = conn.createStatement();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	public void insertIntoBankAcc(String bName,double amount,int accNum ){
+		String sql="insert into bankAccount (bName, amount, accNum) values ('"+bName+"',"+amount+","+accNum+")";
+		try {
+			stmt.executeUpdate(sql);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			JOptionPane.showMessageDialog(null, "accNum already exist");
+			e.printStackTrace();
+		}
+	}
+	public String[] getBankAccData (int accNum){
+		String dbString[]=new String[9];
+		String sql= "select bName,amount from dept where accNum="+accNum;
+
+		ResultSet rs;
+		try {
+			rs = stmt.executeQuery(sql);
+			while(rs.next()){
+				dbString[0]=rs.getString(1);
+				dbString[1]=rs.getString(2);
+				dbString[2]=rs.getString(3);
+				dbString[3]=rs.getString(4);
+				dbString[4]=rs.getString(5);
+				dbString[5]=rs.getString(6);
+				dbString[6]=rs.getString(7);
+				dbString[7]=rs.getString(8);
+				dbString[8]=rs.getString(9);
+				
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return dbString;
+	}
+	public void close(){
+		try {
+			conn.close();
+			stmt.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+}

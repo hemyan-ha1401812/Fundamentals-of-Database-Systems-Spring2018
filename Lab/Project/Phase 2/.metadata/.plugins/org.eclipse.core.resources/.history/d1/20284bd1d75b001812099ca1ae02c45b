@@ -1,0 +1,14 @@
+import java.util.ArrayList;
+
+public class Test {
+
+	public static void main(String[] args) {
+		ArrayList<bankAccount> ba;
+		Bank_Acc_Operation b=new Bank_Acc_Operation();
+		int na = 123;
+		ba= b.search(na);
+		System.out.println(ba);
+
+	}
+
+}

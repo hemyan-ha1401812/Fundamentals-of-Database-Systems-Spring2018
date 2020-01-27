@@ -1,0 +1,60 @@
+
+// ONLINE APPLICATION
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+public class signIN extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField textField_CID;
+	private JTextField textField_Pass;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					signIN frame = new signIN();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public signIN() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblCustomerId = new JLabel("Customer ID");
+		lblCustomerId.setBounds(39, 40, 88, 14);
+		contentPane.add(lblCustomerId);
+		
+		textField_CID = new JTextField();
+		textField_CID.setBounds(184, 37, 179, 20);
+		contentPane.add(textField_CID);
+		textField_CID.setColumns(10);
+		
+		textField_Pass = new JTextField();
+		textField_Pass.setBounds(184, 89, 179, 20);
+		contentPane.add(textField_Pass);
+		textField_Pass.setColumns(10);
+	}
+}

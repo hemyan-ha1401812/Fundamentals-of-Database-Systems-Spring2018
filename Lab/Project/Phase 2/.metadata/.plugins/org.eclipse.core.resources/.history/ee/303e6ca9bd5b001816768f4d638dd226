@@ -1,0 +1,264 @@
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JMenu;
+
+public class MenuG extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					MenuG frame = new MenuG();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public MenuG() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		
+		JMenuBar menuBar = new JMenuBar();
+		setJMenuBar(menuBar);
+		
+//		
+		JMenu mnCustomer = new JMenu("Customer");
+		menuBar.add(mnCustomer);
+		
+		JMenuItem mntmSignIn = new JMenuItem("Sign in ");
+		mnCustomer.add(mntmSignIn);
+		
+		
+		
+		mntmSignIn.addActionListener(new ActionListener() { 
+		public void actionPerformed (ActionEvent arg0 ) {
+			signIN IN = new signIN();
+			IN.setVisible(true);
+			IN.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		}
+		} ) ;
+			
+			
+		
+		JMenuItem mntmSignUp = new JMenuItem("Sign Up");
+		mnCustomer.add(mntmSignUp);
+		
+		mntmSignUp.addActionListener(new ActionListener() { 
+			public void actionPerformed (ActionEvent arg0 ) {
+				signUP UP = new signUP();
+				UP.setVisible(true);
+				UP.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			}
+			} ) ;
+		
+		
+		JMenuItem mntmNewMenuItem_3 = new JMenuItem("C Info");
+		mnCustomer.add(mntmNewMenuItem_3);
+		
+		
+		mntmNewMenuItem_3.addActionListener(new ActionListener() { 
+			public void actionPerformed (ActionEvent arg0 ) {
+				CustomerInfo CI = new CustomerInfo();
+				CI.setVisible(true);
+				CI.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			}
+			} ) ;
+		
+		JMenuItem mntmNewMenuItem_4 = new JMenuItem("C Orders");
+		mnCustomer.add(mntmNewMenuItem_4);
+		
+		
+		mntmNewMenuItem_4.addActionListener(new ActionListener() { 
+			public void actionPerformed (ActionEvent arg0 ) {
+				CustomerOrders CO = new CustomerOrders();
+				CO.setVisible(true);
+				CO.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			}
+			} ) ;
+		
+		JMenuItem mntmCPurchases = new JMenuItem("C purchases");
+		mnCustomer.add(mntmCPurchases);
+		
+		mntmCPurchases.addActionListener(new ActionListener() { 
+			public void actionPerformed (ActionEvent arg0 ) {
+				CustomerPurchase CP = new CustomerPurchase();
+				CP.setVisible(true);
+				CP.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			}
+			} ) ;
+		
+//		
+		JMenu mnNewMenu = new JMenu("BankAccount");
+		menuBar.add(mnNewMenu);
+		
+		JMenuItem mntmNewbaccMenuItem = new JMenuItem("BanAcc");
+		mnNewMenu.add(mntmNewbaccMenuItem);
+		
+		
+		mntmNewbaccMenuItem.addActionListener(new ActionListener() { 
+			public void actionPerformed (ActionEvent arg0 ) {
+				BankAccountFind BAF = new BankAccountFind();
+				BAF.setVisible(true);
+				BAF.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			}
+			} ) ;
+		
+		
+		
+		JMenuItem mntmNewba = new JMenuItem("NewBA");
+		mnNewMenu.add(mntmNewba);
+		
+		mntmNewba.addActionListener(new ActionListener() { 
+			public void actionPerformed (ActionEvent arg0 ) {
+				NewBankAcc NBA = new NewBankAcc();
+				NBA.setVisible(true);
+				NBA.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			}
+			} ) ;
+		
+		
+//		
+		JMenu mnItem = new JMenu("Item");
+		menuBar.add(mnItem);
+		
+		JMenuItem mntmItm = new JMenuItem("Itm");
+		mnItem.add(mntmItm);
+		
+		
+		mntmItm.addActionListener(new ActionListener() { 
+			public void actionPerformed (ActionEvent arg0 ) {
+				item itm = new item();
+				itm.setVisible(true);
+				itm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			}
+			} ) ;
+		
+		
+		JMenuItem mntmInventory = new JMenuItem("InventoryU");
+		mnItem.add(mntmInventory);
+		
+		mntmInventory.addActionListener(new ActionListener() { 
+			public void actionPerformed (ActionEvent arg0 ) {
+				InventoryUpdate IU = new InventoryUpdate();
+				IU.setVisible(true);
+				IU.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			}
+			} ) ;
+		
+		
+		JMenuItem mntmNewMenuItem = new JMenuItem("purchProduct");
+		mnItem.add(mntmNewMenuItem);
+		
+		mntmNewMenuItem.addActionListener(new ActionListener() { 
+			public void actionPerformed (ActionEvent arg0 ) {
+				PProduct pp = new PProduct();
+				pp.setVisible(true);
+				pp.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			}
+			} ) ;
+		
+	
+		
+		JMenuItem mntmNewMenuItem_1 = new JMenuItem("Sales");
+		mnItem.add(mntmNewMenuItem_1);
+		
+		
+		mntmNewMenuItem_1.addActionListener(new ActionListener() { 
+			public void actionPerformed (ActionEvent arg0 ) {
+				sales Sl = new sales();
+				Sl.setVisible(true);
+				Sl.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			}
+			} ) ;
+		
+		
+		JMenuItem mntmNewMenuItem_2 = new JMenuItem("PlaceOrder");
+		mnItem.add(mntmNewMenuItem_2);
+		
+		mntmNewMenuItem_2.addActionListener(new ActionListener() { 
+			public void actionPerformed (ActionEvent arg0 ) {
+				placeOrder po = new placeOrder();
+				po.setVisible(true);
+				po.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			}
+			} ) ;
+		
+		JMenuItem mntmSupplier = new JMenuItem("Supplier");
+		mnItem.add(mntmSupplier);
+		
+		mntmSupplier.addActionListener(new ActionListener() { 
+			public void actionPerformed (ActionEvent arg0 ) {
+				Supplier Sp = new Supplier();
+				Sp.setVisible(true);
+				Sp.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			}
+			} ) ;
+		
+		
+		JMenuItem mntmClasses = new JMenuItem("Classes");
+		mnItem.add(mntmClasses);
+		
+		mntmClasses.addActionListener(new ActionListener() { 
+			public void actionPerformed (ActionEvent arg0 ) {
+				Classes cl = new Classes();
+				cl.setVisible(true);
+				cl.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			}
+			} ) ;
+		
+//		
+		JMenu mnBill = new JMenu("Bill");
+		menuBar.add(mnBill);
+		
+		JMenuItem mntmDisplaybill = new JMenuItem("DisplayBill");
+		mnBill.add(mntmDisplaybill);
+
+		mntmDisplaybill.addActionListener(new ActionListener() { 
+			public void actionPerformed (ActionEvent arg0 ) {
+				DisplayBill DB= new DisplayBill();
+				DB.setVisible(true);
+				DB.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			}
+			} ) ;
+			
+//		
+		JMenu mnExit = new JMenu("Exit");
+			
+		mnExit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				String c= arg0.getActionCommand();
+				if(c.equals(mnExit))
+					System.exit(0);
+				else
+					dispose();
+			}
+		});  
+		
+		menuBar.add(mnExit);
+	
+		
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+	}
+}

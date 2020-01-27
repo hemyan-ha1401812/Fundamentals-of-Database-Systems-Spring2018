@@ -1,0 +1,10 @@
+
+public class Bill {
+	private int quantity;
+	private double price;
+	private double discount;
+	private int accNum;
+	
+	
+	
+}

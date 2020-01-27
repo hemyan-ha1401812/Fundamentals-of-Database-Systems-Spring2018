@@ -1,0 +1,44 @@
+import java.util.ArrayList;
+
+import javax.swing.table.AbstractTableModel;
+
+public class CustomerTableModel  extends AbstractTableModel{
+	private ArrayList<Customer> cust;
+	private String columnNames[]={"BaccNo","Bname","CustID","orderNO"};
+	
+	public CustomerTableModel(ArrayList<Customer> C) {
+		this.C = C;
+		System.out.println(C.size());
+	}
+	@Override
+	public String getColumnName(int c) {
+		// TODO Auto-generated method stub
+		return columnNames[c];
+	}
+
+	@Override
+	public int getColumnCount() {
+		// TODO Auto-generated method stub
+		return 3;
+	}
+
+	@Override
+	public int getRowCount() {
+		// TODO Auto-generated method stub
+		return C.size();
+	}
+
+	@Override
+	public Object getValueAt(int row, int col) {
+		// TODO Auto-generated method stub
+		Customer C = cust.get(row);
+		switch (col) {
+		case 0: return C.getBankNo();
+		case 1: return C.getBname();
+		case 2: return C.getcustID();
+		case 3: return C.getOrderNO();
+		}
+		return null;
+	}
+	
+}
