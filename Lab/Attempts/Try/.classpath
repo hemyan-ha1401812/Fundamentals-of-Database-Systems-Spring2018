@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="lib" path="C:/Users/Sony/Desktop/corses/course 8/Fundamentals of Database Systems Lab (Fatima Amir HR Hamza (P))/Lab 9/JDBC_DRIVER/ojdbc8.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

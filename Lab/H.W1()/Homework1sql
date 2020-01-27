@@ -1,0 +1,13 @@
+--Salsabil hamadi 
+Desc DEPT;--part 1
+Desc emp;
+select empno,ename,job,hiredate from emp;--part2
+select ename,deptno from emp Where deptno between 10 and 30 order by ename;--part3
+select ename from emp WHERE ename LIKE '%L%L' and  deptno =30 OR mgr =7782 ;--part4
+select ename,job,sal from emp Where job='CLERK' OR job='Analyst' 
+and sal != 1000 and sal != 3000 and sal != 5000;--part5
+select empno, ename, sal,sal+(sal *15/100)" New Salary" from emp;--part6
+select Round(Max(sal)),Round(Min(sal)),Round(Sum(sal)),Round(AVG(sal)) from emp;--part7
+select count(Distinct mgr) "Number of Managers" from emp;--part8
+select e.ename,d.dname,e.sal,e.comm, d.loc from emp e,dept d Where e.deptno = d.deptno and d.loc='DALLAS';--part9
+select ename,hiredate,sal from emp Where ename<>'SCOTT' and (sal,NVL(comm,0)) IN (select sal,NVL(comm,0) from emp WHERE ename ='SCOTT');--part10
