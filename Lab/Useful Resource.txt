@@ -1,0 +1,8 @@
+Useful Resource
+https://www.w3resource.com/sql-exercises/
+https://www.tutorialspoint.com/sql/sql-delete-query.htm
+https://sqlzoo.net/
+
+
+https://www.w3schools.com/sql/sql_syntax.asp
+https://www.tutorialspoint.com/sql/index.htm
