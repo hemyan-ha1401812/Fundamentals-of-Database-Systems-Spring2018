@@ -1,0 +1,304 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0071)http://www.pathology.ufl.edu/~computer/training/rdb_course/rdbd_l1.html --><HTML><HEAD><TITLE>Relational Database Design - Structures and Terminology</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<META content="MSHTML 6.00.2800.1400" name=GENERATOR>
+<META content="David Beech" name=Author>
+<META 
+content="Relational Database Design - Structures and Terminology, Tables, Entities, Attributes and Relations" 
+name=Description>
+<META 
+content="Database,Relational Database,Relational Database Design,Design,Structures and Terminology, Tables, Entities, Attributes,Relations" 
+name=KeyWords></HEAD>
+<BODY text=#000000 vLink=#b76767 link=#666a1b bgColor=#efe4c4><A name=start></A>
+<DIV style="WIDTH: 75%">
+<P>
+<TABLE borderColor=white cellSpacing=2 width="80%" align=center bgColor=#000000 
+border=2>
+  <TBODY>
+  <TR>
+    <TD align=middle width="12%" bgColor=#96b284><A 
+      href="http://www.pathology.ufl.edu/~computer/training/rdb_course/index.html"><B>First</B> 
+      </A></TD>
+    <TD align=middle width="12%" bgColor=#96b284><A 
+      href="http://www.pathology.ufl.edu/~computer/training/rdb_course/rdbd_rd1.html"><B>Next</B> 
+      </A></TD>
+    <TD align=middle width="12%" bgColor=#96b284><A 
+      href="http://www.pathology.ufl.edu/~computer/training/rdb_course/index.html"><B>Previous</B> 
+      </A></TD>
+    <TD align=middle width="12%" bgColor=#96b284><A 
+      href="http://www.pathology.ufl.edu/~computer/training/rdb_course/summary.html"><B>Last</B> 
+      </A></TD>
+    <TD align=middle width="12%" bgColor=#96b284><A 
+      href="http://www.pathology.ufl.edu/~computer/training/rdb_course/rdb_glossary.html"><B>Glossary</B> 
+      </A></TD>
+    <TD align=middle width="12%" bgColor=#96b284><A 
+      href="http://www.pathology.ufl.edu/~computer/training/rdb_course/rdbd_l1.html#about"><B>About</B> 
+      </A></TD></TR></TBODY></TABLE></P>
+<H1 align=center>Relational Database Design<BR>Structures and Terminology </H1>
+<H2>Tables, Entities, Attributes and Relations </H2>
+<P>In this lesson you are introduced to a number of concepts: </P>
+<UL>
+  <LI><A 
+  href="http://www.pathology.ufl.edu/~computer/training/rdb_course/rdbd_l1.html#entities">Entities 
+  and the attributes of entities</A> 
+  <LI><A 
+  href="http://www.pathology.ufl.edu/~computer/training/rdb_course/rdbd_l1.html#tables">Tables 
+  and table properties</A> 
+  <LI><A 
+  href="http://www.pathology.ufl.edu/~computer/training/rdb_course/rdbd_l1.html#flatfile">Flat 
+  files</A> </LI></UL><A name=intro></A>
+<H2>Introduction </H2>
+<P>Whenever we design databases we are faced with a number of problems relating 
+to things like data integrity, security, efficiency. We are also faced with 
+problems relating to the structure of the data we are planning to use. For 
+example how do we build a database to store something like an invoice? Although 
+an invoice appears quite straightforward it can contain a number of quite 
+distinctive elements: </P>
+<TABLE cellPadding=2 width="100%">
+  <TBODY>
+  <TR>
+    <TD align=middle width="55%" bgColor=#c0c0c0>&nbsp; 
+      <TABLE cellSpacing=0 cellPadding=7 width="95%" bgColor=#ffffff>
+        <TBODY>
+        <TR>
+          <TD vAlign=top colSpan=3>
+            <CENTER><B><FONT size=+2>Frank and Maisie's Book 
+            Shop</FONT></B></CENTER>
+            <CENTER><B>P.O. 62 Newtown</B></CENTER></TD></TR>
+        <TR vAlign=top align=left>
+          <TD vAlign=top width="75%">Invoice: <BR>Adrian D'Arcy <BR>23 Main 
+            Road 
+            <P>Issue Date: 23/3/98</P></TD>
+          <TD vAlign=top width="50%" colSpan=2>Delivery:&nbsp; 
+            <P>23 Main Road</P></TD></TR>
+        <TR>
+          <TD vAlign=top width="75%" colSpan=2>Living on the wild side <BR>How 
+            to make $100 on real estate <BR>The secret to solid self-esteem 
+            <BR><B><FONT size=+2>Total due</FONT></B></TD>
+          <TD vAlign=top width="50%">
+            <DIV align=right>45.95</DIV>
+            <DIV align=right>99.95</DIV>
+            <DIV align=right>9.45</DIV>
+            <DIV align=right>155.35</DIV></TD></TR>
+        <TR>
+          <TD vAlign=top width="50%"><I>Have you seen our new range of cookery 
+            books? CALL 9872345 for a free catalogue.</I> </TD>
+          <TD vAlign=top width="50%" colSpan=2><I>All accounts are due within 
+            30 days of the issue date.</I></TD></TR></TBODY></TABLE></TD>
+    <TD vAlign=top align=left>
+      <P>This invoice has a number of parts: </P>
+      <UL>
+        <LI>The vendors name (Frank and Maisie) and address 
+        <LI>An address for the customer (Adrian) 
+        <LI>A delivery address 
+        <LI>A date of issue 
+        <LI>A list of goods sold and the prices 
+        <LI>An advertising message 
+        <LI>An administrative message </LI></UL>
+      <P>The parts are all related because they are all on one invoice which 
+      records some business which took place between Frank and Maisie on the one 
+      hand and Adrian on the other.&nbsp; </P>
+      <P>In this module you will learn how to analyse the structure of something 
+      like an invoice and how to design a database from the results of your 
+      analysis.</P></TD>
+    <P></P></TR></TBODY></TABLE>
+<P>Before we get into the detail though we must clarify some of the terms we use 
+to describe data structures and databases. </P><A name=entities></A>
+<H2>Entities </H2>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD width="30%">
+      <TABLE cellSpacing=2 cellPadding=2 align=left border=0>
+        <TBODY>
+        <TR>
+          <TH colSpan=3>Entity: Human Being - Table 1 </TH></TR>
+        <TR>
+          <TH rowSpan=6>Attributes </TH></TR>
+        <TR>
+          <TD bgColor=#b2b67f>NAME</TD>
+          <TD bgColor=#b2b67f>John</TD></TR>
+        <TR>
+          <TD bgColor=#b2b67f>RACE</TD>
+          <TD bgColor=#b2b67f>Caucasian</TD></TR>
+        <TR>
+          <TD bgColor=#b2b67f>EYES</TD>
+          <TD bgColor=#b2b67f>Blue</TD></TR>
+        <TR>
+          <TD bgColor=#b2b67f>HAIR</TD>
+          <TD bgColor=#b2b67f>Brown</TD></TR>
+        <TR>
+          <TD bgColor=#b2b67f>HEIGHT</TD>
+          <TD bgColor=#b2b67f>180 centimetres</TD></TR></TBODY></TABLE></TD>
+    <TD>
+      <P>In the real world we view identifiable and informative objects as 
+      entities, things with real and individual existence. A human being is an 
+      entity, identified by certain properties, characteristics or attributes. 
+      In simple terms we could say that the attributes of a human being are such 
+      things as name, race, eye colour, hair colour, height etc. Each attribute 
+      of the entity has a value. </P></TD></TR></TBODY></TABLE><BR clear=all>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD>
+      <P>Table 2 shows the relationship between terms used when talking about 
+      tables. For instance, you can see that attribute, field and column are 
+      taken to mean the same thing. Strictly speaking Entities have Attributes, 
+      Records have Fields, Tables have Columns and Rows. </P></TD>
+    <TD width="40%">
+      <TABLE cellSpacing=2 cellPadding=2 width="40%" align=right border=0>
+        <TBODY>
+        <TR>
+          <TH colSpan=5>
+            <DIV align=right>Table 2 - Attributes (Fields or 
+Columns)</DIV></TH></TR>
+        <TR>
+          <TH rowSpan=9>Entities (rows, records or tuples)</TH></TR>
+        <TR>
+          <TD bgColor=#b2b67f><B><I>Name</I></B></TD>
+          <TD bgColor=#b2b67f><B><I>Race</I></B></TD>
+          <TD bgColor=#b2b67f><B><I>Eyes</I></B></TD>
+          <TD bgColor=#b2b67f><B><I>Hair</I></B></TD></TR>
+        <TR>
+          <TD bgColor=#b2b67f>Mark</TD>
+          <TD bgColor=#b2b67f>Caucasian</TD>
+          <TD bgColor=#b2b67f>Blue</TD>
+          <TD bgColor=#b2b67f>Red</TD></TR>
+        <TR>
+          <TD bgColor=#b2b67f>Ng</TD>
+          <TD bgColor=#b2b67f>Asian</TD>
+          <TD bgColor=#b2b67f>Black</TD>
+          <TD bgColor=#b2b67f>Black</TD></TR>
+        <TR>
+          <TD bgColor=#b2b67f>Rachel</TD>
+          <TD bgColor=#b2b67f>Caucasian</TD>
+          <TD bgColor=#b2b67f>Green</TD>
+          <TD bgColor=#b2b67f>Black</TD></TR>
+        <TR>
+          <TD bgColor=#b2b67f>Grace</TD>
+          <TD bgColor=#b2b67f>Negro</TD>
+          <TD bgColor=#b2b67f>Brown</TD>
+          <TD bgColor=#b2b67f>Black</TD></TR>
+        <TR>
+          <TD bgColor=#b2b67f>Selie</TD>
+          <TD bgColor=#b2b67f>Asian</TD>
+          <TD bgColor=#b2b67f>Brown</TD>
+          <TD bgColor=#b2b67f>Black</TD></TR>
+        <TR>
+          <TD bgColor=#b2b67f>Susan</TD>
+          <TD bgColor=#b2b67f>Negro</TD>
+          <TD bgColor=#b2b67f>Brown</TD>
+          <TD bgColor=#b2b67f>Black</TD></TR>
+        <TR>
+          <TD bgColor=#b2b67f>George</TD>
+          <TD bgColor=#b2b67f>Caucasian</TD>
+          <TD bgColor=#b2b67f>Blue</TD>
+          <TD 
+bgColor=#b2b67f>Blonde</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><BR 
+clear=all><A name=tables></A>
+<H2>Tables and table properties </H2>
+<P>The table structure has some distinct properties </P>
+<OL>
+  <LI>Each entry in the table represents one data item, there are no repeating 
+  groups. 
+  <LI>The table is column homogenous, i.e. in a given column all items are of 
+  the same kind. 
+  <LI>Each column is assigned a distinct name. It cannot be the same as any 
+  other column in the same table. 
+  <LI>Duplicate rows are not allowed, each row must be identifiable by a unique 
+  key. 
+  <LI>Rows and columns can be viewed in any sequence at any time without 
+  affecting the table contents or the semantics of any function using the table. 
+  </LI></OL><A name=flatfile></A>
+<H2>Flat files </H2>
+<TABLE cellSpacing=2 cellPadding=2 width="75%" align=left border=0>
+  <TBODY>
+  <TR bgColor=#999999>
+    <TD>SURNAME</B></TD>
+    <TD>FNAME</B></TD>
+    <TD>TOWN</B></TD>
+    <TD>PC</B></TD>
+    <TD>SEX</B></TD>
+    <TD>AGE</B></TD></TR>
+  <TR bgColor=#b2b67f>
+    <TD bgColor=#b2b67f>BROWN</TD>
+    <TD bgColor=#b2b67f>ARTHUR</TD>
+    <TD bgColor=#b2b67f>LAUNCESTON</TD>
+    <TD bgColor=#b2b67f>3467</TD>
+    <TD bgColor=#b2b67f>M</TD>
+    <TD bgColor=#b2b67f>27</TD></TR>
+  <TR>
+    <TD bgColor=#b2b67f>SMITH</TD>
+    <TD bgColor=#b2b67f>MARY</TD>
+    <TD bgColor=#b2b67f>BURNIE</TD>
+    <TD bgColor=#b2b67f>2561</TD>
+    <TD bgColor=#b2b67f>F</TD>
+    <TD bgColor=#b2b67f>45</TD></TR>
+  <TR>
+    <TD bgColor=#b2b67f>JAMES</TD>
+    <TD bgColor=#b2b67f>MERVYN</TD>
+    <TD bgColor=#b2b67f>JOHN</TD>
+    <TD bgColor=#b2b67f>7000</TD>
+    <TD bgColor=#b2b67f>M</TD>
+    <TD bgColor=#b2b67f>37</TD></TR>
+  <TR>
+    <TD bgColor=#b2b67f>JONES</TD>
+    <TD bgColor=#b2b67f>BRIAN</TD>
+    <TD bgColor=#b2b67f>DEVONPORT</TD>
+    <TD bgColor=#b2b67f>9871</TD>
+    <TD bgColor=#b2b67f>M</TD>
+    <TD bgColor=#b2b67f>32</TD></TR>
+  <TR>
+    <TD bgColor=#b2b67f>JACKSON</TD>
+    <TD bgColor=#b2b67f>COLIN</TD>
+    <TD bgColor=#b2b67f>SMITHTON</TD>
+    <TD bgColor=#b2b67f>2219</TD>
+    <TD bgColor=#b2b67f>M</TD>
+    <TD bgColor=#b2b67f>37</TD></TR>
+  <TR>
+    <TD bgColor=#b2b67f>BILLINGS</TD>
+    <TD bgColor=#b2b67f>BETH</TD>
+    <TD bgColor=#b2b67f>LAUNCESTON</TD>
+    <TD bgColor=#b2b67f>8971</TD>
+    <TD bgColor=#b2b67f>F</TD>
+    <TD bgColor=#b2b67f>22</TD></TR>
+  <TR>
+    <TD bgColor=#b2b67f>WILSON</TD>
+    <TD bgColor=#b2b67f>MERYL</TD>
+    <TD bgColor=#b2b67f>PENGUIN</TD>
+    <TD bgColor=#b2b67f>8918</TD>
+    <TD bgColor=#b2b67f>F</TD>
+    <TD bgColor=#b2b67f>36</TD></TR></TBODY></TABLE>
+<P>A flat file does not contain any repeating fields, a table is simply a 
+two-dimensional (tabular) representation of the flat file. </P>
+<P>The table data might be stored in a delimited format, for example 
+comma-delimited (cdl) or tab-delimited. </P><BR clear=all>
+<P><A 
+href="http://www.pathology.ufl.edu/~computer/training/rdb_course/rdbd_l1.html#start">Return 
+to top of page</A> </P>
+<P>
+<TABLE borderColor=white cellSpacing=2 width="80%" align=center 
+bgColor=lightblue border=2>
+  <TBODY>
+  <TR>
+    <TD align=middle width="12%" bgColor=#96b284><A 
+      href="http://www.pathology.ufl.edu/~computer/training/rdb_course/index.html"><B>First</B> 
+      </A></TD>
+    <TD align=middle width="12%" bgColor=#96b284><A 
+      href="http://www.pathology.ufl.edu/~computer/training/rdb_course/rdbd_rd1.html"><B>Next</B> 
+      </A></TD>
+    <TD align=middle width="12%" bgColor=#96b284><A 
+      href="http://www.pathology.ufl.edu/~computer/training/rdb_course/index.html"><B>Previous</B> 
+      </A></TD>
+    <TD align=middle width="12%" bgColor=#96b284><A 
+      href="http://www.pathology.ufl.edu/~computer/training/rdb_course/summary.html"><B>Last</B> 
+      </A></TD>
+    <TD align=middle width="12%" bgColor=#96b284><A 
+      href="http://www.pathology.ufl.edu/~computer/training/rdb_course/rdb_glossary.html"><B>Glossary</B> 
+      </A></TD>
+    <TD align=middle width="12%" bgColor=#96b284><A 
+      href="http://www.pathology.ufl.edu/~computer/training/rdb_course/rdbd_l1.html#about"><B>About</B> 
+      </A></TD></TR></TBODY></TABLE></P><!-- Footer ---><A name=about></A>
+<P>Copyright © 1999 - 2001 <A 
+href="http://www.pathology.ufl.edu/~computer/training/intouch.html">David 
+Beech</A> </P></DIV></BODY></HTML>

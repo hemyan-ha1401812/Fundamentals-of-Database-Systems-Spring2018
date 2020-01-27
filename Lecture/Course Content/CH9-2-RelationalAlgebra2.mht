@@ -1,0 +1,1053 @@
+From: <Saved by Windows Internet Explorer 7>
+Subject: Additional Operations
+Date: Wed, 22 Apr 2009 11:04:50 +0300
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_00A0_01C9C33A.27EB6EB0"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.5579
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_00A0_01C9C33A.27EB6EB0
+Content-Type: text/html;
+	charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file://D:\MyFilesAll\MyFiles\QatarUniv\Courses\Database\CourseSlides\AdditionalOperations.html
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Additional Operations</TITLE>
+<META http-equiv=3DContent-Type content=3D"text/html; =
+charset=3Dwindows-1252"><!--- Converted with LaTeX2HTML 0.6.4 (Tues Aug =
+30 1994) by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of =
+Leeds --->
+<META name=3Ddescription value=3D" Additional Operations">
+<META name=3Dkeywords value=3D"chapter3">
+<META name=3Dresource-type value=3D"document">
+<META name=3Ddistribution value=3D"global">
+<META content=3D"MSHTML 6.00.6000.16809" name=3DGENERATOR></HEAD>
+<BODY=20
+background=3Dfile:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/Cou=
+rseSlides/AdditionalOperations_files/cmpt354.gif>
+<P></P>
+<P><BR></P>
+<HR>
+<A =
+href=3D"http://www.cs.sfu.ca/CC/354/zaiane/material/notes/Chapter3/node11=
+.html"=20
+name=3Dtex2html165><IMG alt=3Dnext=20
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/next_motif.gif"=20
+align=3Dbottom></A> <A=20
+href=3D"http://www.cs.sfu.ca/CC/354/zaiane/material/notes/Chapter3/node7.=
+html"=20
+name=3Dtex2html163><IMG alt=3Dup=20
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/up_motif.gif"=20
+align=3Dbottom></A> <A=20
+href=3D"http://www.cs.sfu.ca/CC/354/zaiane/material/notes/Chapter3/node9.=
+html"=20
+name=3Dtex2html159><IMG alt=3Dprevious=20
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/previous_motif.gif"=20
+align=3Dbottom></A> <BR><B>Next:</B> <A=20
+href=3D"http://www.cs.sfu.ca/CC/354/zaiane/material/notes/Chapter3/node11=
+.html"=20
+name=3Dtex2html166>The Tuple Relational </A><B>Up:</B> <A=20
+href=3D"http://www.cs.sfu.ca/CC/354/zaiane/material/notes/Chapter3/node7.=
+html"=20
+name=3Dtex2html164>The Relational Algebra</A> <B>Previous:</B> <A=20
+href=3D"http://www.cs.sfu.ca/CC/354/zaiane/material/notes/Chapter3/node9.=
+html"=20
+name=3Dtex2html160>Formal Definition of </A><BR>
+<HR>
+
+<P></P>
+<H2><A name=3DSECTION00123000000000000000>Additional Operations</A></H2>
+<P></P>
+<OL>
+  <LI>Additional operations are defined in terms of the fundamental =
+operations.=20
+  They do not add power to the algebra, but are useful to simplify =
+common=20
+  queries.=20
+  <P></P>
+  <LI><B>The Set Intersection Operation</B>=20
+  <P>Set intersection is denoted by <IMG=20
+  =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_tex2html_wrap1329.gif"=20
+  align=3Dbottom>, and returns a relation that contains tuples that are =
+in=20
+  <B>both</B> of its argument relations. </P>
+  <P>It does not add any power as</P>
+  <P><IMG=20
+  =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_displaymath1315.gif"=20
+  align=3Dbottom></P>
+  <P></P>
+  <P></P>
+  <P>To find all customers having both a loan and an account at the SFU =
+branch,=20
+  we write </P>
+  <P><IMG=20
+  =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_eqnarray430.gif"=20
+  align=3Dbottom></P>
+  <P></P>
+  <P></P>
+  <P></P>
+  <LI><B>The Natural Join Operation</B>=20
+  <P>Often we want to simplify queries on a cartesian product. </P>
+  <P>For example, to find all customers having a loan at the bank and =
+the cities=20
+  in which they live, we need <EM>borrow</EM> and <EM>customer</EM> =
+relations:=20
+  </P>
+  <P><IMG=20
+  =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_eqnarray439.gif"=20
+  align=3Dbottom></P>
+  <P>Our selection predicate obtains only those tuples pertaining to =
+only one=20
+  <EM>cname</EM>. </P>
+  <P>This type of operation is very common, so we have the <B>natural =
+join</B>,=20
+  denoted by a <IMG=20
+  =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_tex2html_wrap1365.gif"=20
+  align=3Dbottom> sign. Natural join combines a cartesian product and a =
+selection=20
+  into one operation. It performs a selection forcing equality on those=20
+  attributes that appear in both relation schemes. Duplicates are =
+removed as in=20
+  all relation operations. </P>
+  <P>To illustrate, we can rewrite the previous query as</P>
+  <P><IMG=20
+  =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_displaymath1316.gif"=20
+  align=3Dbottom></P>
+  <P>The resulting relation is shown in Figure <A=20
+  =
+href=3D"http://www.cs.sfu.ca/CC/354/zaiane/material/notes/Chapter3/node10=
+.html#fig317join">3.7</A>.=20
+  </P>
+  <P></P>
+  <P><A name=3D807>&nbsp;</A><IMG=20
+  =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_figure447.gif"=20
+  align=3Dbottom> <BR><STRONG>Figure 3.7:</STRONG> <A =
+name=3Dfig317join>&nbsp;</A>=20
+  Joining <EM>borrow</EM> and <EM>customer</EM> relations.<BR></P>
+  <P></P>
+  <P>We can now make a more formal definition of natural join. </P>
+  <UL>
+    <LI>Consider <IMG=20
+    =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_tex2html_wrap1181.gif"=20
+    align=3Dbottom> and <IMG=20
+    =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_tex2html_wrap1335.gif"=20
+    align=3Dbottom> to be <B>sets</B> of attributes.=20
+    <LI>We denote attributes appearing in <B>both</B> relations by <IMG=20
+    =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_tex2html_wrap1337.gif"=20
+    align=3Dbottom>.=20
+    <P></P>
+    <LI>We denote attributes in <B>either or both</B> relations by <IMG=20
+    =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_tex2html_wrap1339.gif"=20
+    align=3Dbottom>.=20
+    <P></P>
+    <LI>Consider two relations <IMG=20
+    =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_tex2html_wrap1383.gif"=20
+    align=3Dbottom> and <IMG=20
+    =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_tex2html_wrap1385.gif"=20
+    align=3Dbottom>.=20
+    <P></P>
+    <LI>The natural join of <IMG=20
+    =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_tex2html_wrap1345.gif"=20
+    align=3Dbottom> and <IMG=20
+    =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_tex2html_wrap1531.gif"=20
+    align=3Dbottom>, denoted by <IMG=20
+    =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_tex2html_wrap1349.gif"=20
+    align=3Dbottom> is a relation on scheme <IMG=20
+    =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_tex2html_wrap1339.gif"=20
+    align=3Dbottom>.=20
+    <LI>It is a projection onto <IMG=20
+    =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_tex2html_wrap1339.gif"=20
+    align=3Dbottom> of a selection on <IMG=20
+    =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_tex2html_wrap1355.gif"=20
+    align=3Dbottom> where the predicate requires <IMG=20
+    =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_tex2html_wrap1357.gif"=20
+    align=3Dbottom> for each attribute <IMG=20
+    =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_tex2html_wrap1681.gif"=20
+    align=3Dbottom> in <IMG=20
+    =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_tex2html_wrap1337.gif"=20
+    align=3Dbottom>. </LI></UL>
+  <P>Formally,</P>
+  <P><IMG=20
+  =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_displaymath1317.gif"=20
+  align=3Dbottom></P>
+  <P>where <IMG=20
+  =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_tex2html_wrap1363.gif"=20
+  align=3Dbottom>. </P>
+  <P></P>
+  <P>To find the assets and names of all branches which have depositors =
+living=20
+  in Stamford, we need <EM>customer</EM>, <EM>deposit</EM> and =
+<EM>branch</EM>=20
+  relations: </P>
+  <P><IMG=20
+  =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_eqnarray475.gif"=20
+  align=3Dbottom></P>
+  <P></P>
+  <P>Note that <IMG=20
+  =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_tex2html_wrap1365.gif"=20
+  align=3Dbottom> is associative. </P>
+  <P></P>
+  <P>To find all customers who have both an account and a loan at the =
+SFU=20
+  branch:</P>
+  <P><IMG=20
+  =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_displaymath1318.gif"=20
+  align=3Dbottom></P>
+  <P></P>
+  <P>This is equivalent to the set intersection version we wrote =
+earlier. We see=20
+  now that there can be several ways to write a query in the relational =
+algebra.=20
+  </P>
+  <P></P>
+  <P>If two relations <IMG=20
+  =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_tex2html_wrap1383.gif"=20
+  align=3Dbottom> and <IMG=20
+  =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_tex2html_wrap1385.gif"=20
+  align=3Dbottom> have no attributes in common, then <IMG=20
+  =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_tex2html_wrap1371.gif"=20
+  align=3Dbottom>, and <IMG=20
+  =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_tex2html_wrap1373.gif"=20
+  align=3Dbottom>. </P>
+  <P></P>
+  <P></P>
+  <LI><B>The Division Operation</B>=20
+  <P>Division, denoted <IMG=20
+  =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_tex2html_wrap1375.gif"=20
+  align=3Dbottom>, is suited to queries that include the phrase ``for =
+all''. </P>
+  <P></P>
+  <P>Suppose we want to find all the customers who have an account at =
+<B>all</B>=20
+  branches located in Brooklyn. </P>
+  <P>Strategy: think of it as three steps. </P>
+  <P></P>
+  <P>We can obtain the names of all branches located in Brooklyn by</P>
+  <P><IMG=20
+  =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_displaymath1319.gif"=20
+  align=3Dbottom></P>
+  <P>Figure 3.19 in the textbook shows the result. </P>
+  <P></P>
+  <P>We can also find all <EM>cname, bname</EM> pairs for which the =
+customer has=20
+  an account by</P>
+  <P><IMG=20
+  =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_displaymath1320.gif"=20
+  align=3Dbottom></P>
+  <P>Figure 3.20 in the textbook shows the result. </P>
+  <P></P>
+  <P>Now we need to find all customers who appear in <IMG=20
+  =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_tex2html_wrap1261.gif"=20
+  align=3Dbottom> with <B>every</B> branch name in <IMG=20
+  =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_tex2html_wrap1251.gif"=20
+  align=3Dbottom>. </P>
+  <P>The divide operation provides exactly those customers: </P>
+  <P><IMG=20
+  =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_eqnarray492.gif"=20
+  align=3Dbottom></P>
+  <P>which is simply <IMG=20
+  =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_tex2html_wrap1381.gif"=20
+  align=3Dbottom>. </P>
+  <P></P>
+  <P>Formally, </P>
+  <UL>
+    <LI>Let <IMG=20
+    =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_tex2html_wrap1383.gif"=20
+    align=3Dbottom> and <IMG=20
+    =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_tex2html_wrap1385.gif"=20
+    align=3Dbottom> be relations.=20
+    <LI>Let <IMG=20
+    =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_tex2html_wrap1387.gif"=20
+    align=3Dbottom>.=20
+    <P></P>
+    <LI>The relation <IMG=20
+    =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_tex2html_wrap1409.gif"=20
+    align=3Dbottom> is a relation on scheme <IMG=20
+    =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_tex2html_wrap1405.gif"=20
+    align=3Dbottom>.=20
+    <P></P>
+    <LI>A tuple <IMG=20
+    =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_tex2html_wrap1447.gif"=20
+    align=3Dbottom> is in <IMG=20
+    =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_tex2html_wrap1409.gif"=20
+    align=3Dbottom> if for every tuple <IMG=20
+    =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_tex2html_wrap1397.gif"=20
+    align=3Dbottom> in <IMG=20
+    =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_tex2html_wrap1531.gif"=20
+    align=3Dbottom> there is a tuple <IMG=20
+    =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_tex2html_wrap1401.gif"=20
+    align=3Dbottom> in <IMG=20
+    =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_tex2html_wrap1345.gif"=20
+    align=3Dbottom> satisfying both of the following:=20
+    <P><IMG=20
+    =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_eqnarray502.gif"=20
+    align=3Dbottom></P>
+    <P></P>
+    <P></P>
+    <LI>These conditions say that the <IMG=20
+    =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_tex2html_wrap1405.gif"=20
+    align=3Dbottom> portion of a tuple <IMG=20
+    =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_tex2html_wrap1447.gif"=20
+    align=3Dbottom> is in <IMG=20
+    =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_tex2html_wrap1409.gif"=20
+    align=3Dbottom> if and only if there are tuples with the <IMG=20
+    =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_tex2html_wrap1291.gif"=20
+    align=3Dbottom> portion <B>and</B> the <IMG=20
+    =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_tex2html_wrap1335.gif"=20
+    align=3Dbottom> portion in <IMG=20
+    =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_tex2html_wrap1345.gif"=20
+    align=3Dbottom> for <B>every</B> value of the <IMG=20
+    =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_tex2html_wrap1335.gif"=20
+    align=3Dbottom> portion in relation <IMG=20
+    =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_tex2html_wrap1335.gif"=20
+    align=3Dbottom>. </LI></UL>
+  <P>We will look at this explanation in class more closely. </P>
+  <P></P>
+  <P>The division operation can be defined in terms of the fundamental=20
+  operations.</P>
+  <P><IMG=20
+  =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_displaymath1321.gif"=20
+  align=3Dbottom></P>
+  <P>Read the text for a more detailed explanation. </P>
+  <P></P>
+  <P></P>
+  <LI><B>The Assignment Operation</B>=20
+  <P>Sometimes it is useful to be able to write a relational algebra =
+expression=20
+  in parts using a temporary relation variable (as we did with <IMG=20
+  =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_tex2html_wrap1251.gif"=20
+  align=3Dbottom> and <IMG=20
+  =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_tex2html_wrap1261.gif"=20
+  align=3Dbottom> in the division example). </P>
+  <P></P>
+  <P>The assignment operation, denoted <IMG=20
+  =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_tex2html_wrap1425.gif"=20
+  align=3Dbottom>, works like assignment in a programming language. </P>
+  <P>We could rewrite our division definition as </P>
+  <P><IMG=20
+  =
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/_7092_eqnarray516.gif"=20
+  align=3Dbottom></P>
+  <P></P>
+  <P></P>
+  <P>No extra relation is added to the database, but the relation =
+variable=20
+  created can be used in subsequent expressions. Assignment to a =
+permanent=20
+  relation would constitute a modification to the database. =
+</P></LI></OL>
+<P><BR></P>
+<HR>
+<A =
+href=3D"http://www.cs.sfu.ca/CC/354/zaiane/material/notes/Chapter3/node11=
+.html"=20
+name=3Dtex2html165><IMG alt=3Dnext=20
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/next_motif.gif"=20
+align=3Dbottom></A> <A=20
+href=3D"http://www.cs.sfu.ca/CC/354/zaiane/material/notes/Chapter3/node7.=
+html"=20
+name=3Dtex2html163><IMG alt=3Dup=20
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/up_motif.gif"=20
+align=3Dbottom></A> <A=20
+href=3D"http://www.cs.sfu.ca/CC/354/zaiane/material/notes/Chapter3/node9.=
+html"=20
+name=3Dtex2html159><IMG alt=3Dprevious=20
+src=3D"file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSli=
+des/AdditionalOperations_files/previous_motif.gif"=20
+align=3Dbottom></A> <BR><B>Next:</B> <A=20
+href=3D"http://www.cs.sfu.ca/CC/354/zaiane/material/notes/Chapter3/node11=
+.html"=20
+name=3Dtex2html166>The Tuple Relational </A><B>Up:</B> <A=20
+href=3D"http://www.cs.sfu.ca/CC/354/zaiane/material/notes/Chapter3/node7.=
+html"=20
+name=3Dtex2html164>The Relational Algebra</A> <B>Previous:</B> <A=20
+href=3D"http://www.cs.sfu.ca/CC/354/zaiane/material/notes/Chapter3/node9.=
+html"=20
+name=3Dtex2html160>Formal Definition of </A><BR>
+<HR>
+
+<P><BR></P>
+<HR>
+
+<P></P>
+<ADDRESS>Page created and maintained by <A=20
+href=3D"http://fas.sfu.ca/cs/people/GradStudents/zaiane">Osmar R. Za=EF=20
+ane</A><BR>Last Update: Wed Sep 20 15:45:57 PDT 1995 </ADDRESS>
+<SCRIPT type=3Dtext/javascript><!--
+function __RP_Callback_Helper(str, strCallbackEvent, splitSize, =
+func){var event =3D null;if (strCallbackEvent){event =3D =
+document.createEvent('Events');event.initEvent(strCallbackEvent, true, =
+true);}if (str && str.length > 0){var splitList =3D str.split('|');var =
+strCompare =3D str;if (splitList.length =3D=3D splitSize)strCompare =3D =
+splitList[splitSize-1];var pluginList =3D document.plugins;for (var =
+count =3D 0; count < pluginList.length; count++){var sSrc =3D '';if =
+(pluginList[count] && pluginList[count].src)sSrc =3D =
+pluginList[count].src;if (strCompare.length >=3D sSrc.length){if =
+(strCompare.indexOf(sSrc) !=3D -1){func(str, count, pluginList, =
+splitList);break;}}}}if =
+(strCallbackEvent)document.body.dispatchEvent(event);}function =
+__RP_Coord_Callback(str){var func =3D function(str, index, pluginList, =
+splitList){pluginList[index].__RP_Coord_Callback =3D =
+str;pluginList[index].__RP_Coord_Callback_Left =3D =
+splitList[0];pluginList[index].__RP_Coord_Callback_Top =3D =
+splitList[1];pluginList[index].__RP_Coord_Callback_Right =3D =
+splitList[2];pluginList[index].__RP_Coord_Callback_Bottom =3D =
+splitList[3];};__RP_Callback_Helper(str, 'rp-js-coord-callback', 5, =
+func);}function __RP_Url_Callback(str){var func =3D function(str, index, =
+pluginList, splitList){pluginList[index].__RP_Url_Callback =3D =
+str;pluginList[index].__RP_Url_Callback_Vid =3D =
+splitList[0];pluginList[index].__RP_Url_Callback_Parent =3D =
+splitList[1];};__RP_Callback_Helper(str, 'rp-js-url-callback', 3, =
+func);}function __RP_TotalBytes_Callback(str){var func =3D function(str, =
+index, pluginList, splitList){pluginList[index].__RP_TotalBytes_Callback =
+=3D str;pluginList[index].__RP_TotalBytes_Callback_Bytes =3D =
+splitList[0];};__RP_Callback_Helper(str, null, 2, func);}function =
+__RP_Connection_Callback(str){var func =3D function(str, index, =
+pluginList, splitList){pluginList[index].__RP_Connection_Callback =3D =
+str;pluginList[index].__RP_Connection_Callback_Url =3D =
+splitList[0];};__RP_Callback_Helper(str, null, 2, func);}
+//--></SCRIPT>
+</BODY></HTML>
+
+------=_NextPart_000_00A0_01C9C33A.27EB6EB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSlides/AdditionalOperations_files/next_motif.gif
+
+R0lGODlhJQAYAPEAAL+/v+fn529vb1sAACH5BAEAAAAALAAAAAAlABgAAAJ9jI+py+2/hAG02ovz
+FTLoD2LcFJbf6Jnq1lUD9q5iSw2xKwM3gOL7btr1ajrLzWYj+pKUYfH5/CmPFmeMeTVOcRUr94pk
+6qRdGrSYzYjPXp/ykmabgWJqlNucw39Y7bhMkqPiJFhCWAhyiKihuDhjwBEpOUlZaRlgmamZWQAA
+Ow==
+
+------=_NextPart_000_00A0_01C9C33A.27EB6EB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSlides/AdditionalOperations_files/up_motif.gif
+
+R0lGODlhGgAYAPEAAL+/v+fn529vb1sAACH5BAEAAAAALAAAAAAaABgAAAJijI+py61igJy0WiBg
+uPzm2IXSt4khOQ2WemrpKqISS9GcDNjzPvQUrsvNWDYgTPgauXYVYm1ibDKn0SeSupxefVdMdsjl
+hb0gUVBZDp3JJfPta7Lg4nJN5o7P6/GBvf8vUAAAOw==
+
+------=_NextPart_000_00A0_01C9C33A.27EB6EB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSlides/AdditionalOperations_files/previous_motif.gif
+
+R0lGODlhPwAYAPEAAL+/v+fn529vb1sAACH5BAEAAAAALAAAAAA/ABgAAAKtjI+py+0Po5xJGICz
+3rz7D2qCFYTmiX7jlbYuuJbvTANxNuR6jQ28SMJpcr8i5tbb+Iw/JGApfEp7u6kQqsMOqcSME/pc
+dq1TrVUcTYKh36w5GTWj41swkEXe4tzwct9/NeYV9KdXeEWX+FdlQ5iX9qimCHjI5mgHeWaoyRlG
+ZomHWSn4uSe4I8bYiMfUOsjq2uoUK+tIyzR7WxQz0uv7CxwsPEwcHFCMnKyMXAAAOw==
+
+------=_NextPart_000_00A0_01C9C33A.27EB6EB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSlides/AdditionalOperations_files/_7092_tex2html_wrap1329.gif
+
+R0lGODlhCQALAIAAAAAAAP///yH5BAEAAAEALAAAAAAJAAsAAAITjIF2sJwaHFRvVngpm3Fbj4FU
+AQA7
+
+------=_NextPart_000_00A0_01C9C33A.27EB6EB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSlides/AdditionalOperations_files/_7092_displaymath1315.gif
+
+R0lGODlhOQERAIAAAAAAAP///yH5BAEAAAEALAAAAAA5AREAAALUjI+py+0Po5y02ouztmDL7oXi
+SJbmiWIAmBprC8fyvK0sXd+wjvf+b3oFbMALryUsKpfMR9LVjDxl06j1WrIREUee1qOtTqbh43jr
+MmPX7Eo50VWAquWvPJwh4/Ppg7gNGOjw4rXgpcbRgQhBp5hzJxgpyaAWB4emUVnXKNewKWbXNzkq
++TdkeDnU9Wm4+KFjSkF4E0tqy2Rq6TfXutkaogfMu3tbvJaLyhWa5yoF28y4XGtMHaUrCD2SXc3d
+7TOtve09To4CLiJerr4OTMX+Do/UUwAAOw==
+
+------=_NextPart_000_00A0_01C9C33A.27EB6EB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSlides/AdditionalOperations_files/_7092_eqnarray430.gif
+
+R0lGODlh9AERAIAAAAAAAP///yH5BAEAAAEALAAAAAD0AREAAAL+jI+py+0PE4i02ovfzFzLDobc
+JpamSZ5gGrAqAMeySsH0jUd2u+dQz8PJhi4fAmhM0pAG5qsIdKJI0mRVie1Ei9nmpxLTUbnKa/cs
+ZphDu+hXOEZ75XQMa21N4dvmHl5YF1jT8CeydUTGFodWKCiHlNh16ACpscgY6VhX1bhyp5eZ4Re6
+BDWk+QgadrBK1HTKyrdhM/nqoZA4SsfkinoGOfM6GiwcO8yzahsLt4yJ69p5M/HZIhw8k1zdrLw4
+DdsbVN3qjVhOuZB7+ft5Gr2kvTzbi+22Hc43h0x+PyerbP7vib0swFgdEbSP3zZ5B72AMsfQFq1y
+l2hFfDgQFzr+SuokYYQH8lE4hf8i5psG8B7DSRbjucAn4aPAgATvLCSVIyEVYwZH+gFZr01DKBp7
+7sw3MunGomo61mzoEyegnyep6nKY8mjInkH0WIPKS+aJqzxhfdVHDNnAimHMfiUCTJ5ZYtmUljRY
+S5tQiS9fNjuat8/SpmtlbTGcNlm9qIgRIc42bq7igs+4Jky6cmtUeC11kZPp7oc6uFX17o3T0aTp
+vRLV6qU44pBNroSNWqZpV+vFmCkHQ0U3ui3ria5nxbOn2nir48VLS3UM+3ekoCh17+5nvPXlvFPg
+ZudrGzznyTErdfZqmqQ+OzdDoiekasy4yuWHpQ0omOkz70i/uwJ2WRVZ6x2Ej1UAjhcNW+79Bpxj
+9EwGYWPFuIbccyUoN+F1FmX3ngfEKdaaf/+hVddttIGlgy9v9OfbiRZwmCE3fMHo4kan3Yhdc6u5
+hWKNnKUoioUvrujRhxKuZFhvTXFoH0oiGiPXfQ5G2VeJDaqImZCK3EhljpGJBRxgR854FmlLSjhl
+Guz5wB2WF2rppjRw5kRknIbMaeebF0g5Vp15svGnI3i+4GegWhi6CZazIWoIo7s4CqkokUriaAEA
+Ow==
+
+------=_NextPart_000_00A0_01C9C33A.27EB6EB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSlides/AdditionalOperations_files/_7092_eqnarray439.gif
+
+R0lGODlh9AERAIAAAAAAAP///yH5BAEAAAEALAAAAAD0AREAAAL+jI+py+0Po5w0gYqz3rz7v13g
+SJageKAMwLauCcclK9f2jdd00Ob+P9kZhCsUEYi8HZPMpvOkWj5zUpmK9xBWp1zMtQsOh69b8eyr
+i6JTxrX5bXHD5/SzZayQc8ow4larVzf25cIneIjIhlC4CPjCwzjkKAmZF+XQAyniuPmoycaYKblT
+qNbYAHiaGBO4cFR6Ybg6K+a3qYilmVlKmbsbi0a6xvub0ms7NNp5fKuLjOvadkc7syjxnJtMjdS6
+3Xv8LZxducwMHv3XXLnOHi7N/k6TSmZaBN3uTdLtBy2bP9LNG791l7RNM4YwmxFUcoIl1NXPmkEt
+DyveS3dR1C/+YZPIxSoCTBREZyJFgjpJsNiSgfA0cuzU0eM4lJGUKfP0iaQaYAY/edpYMyfOk0Ef
+waKnZyApXCvJRNRWZajEaSqlfTTHTN09Vd8sXYQaUp5PSqF6gjKqCCbUtJZe5kx5NY5EpWRfhPTF
+s4dWm7vYCp0Yl2GoNuLq9lX4UW9btGRHrfXLcG7Cd1wnzt3LdNhkxwSNiQWcWV05r1vP8sKyVOZX
+mZjHyVuIuLPNg2ZTNSY923Oz15XLfSYkl2Ls1CMxnbI1ehlvxIXzHIdtVatUuWdNl36FE5a90s5M
+w+xY0zbQ0dS7UuDpqzbVtVJuqcUL9u/M9PQp7l4RAf39qY+B0698fFhqr+13FHs96VdffAGaJdl7
+vhmGUCAB/fOGUxq4RFxt49VjF2eRKOeWYd+5U100EGC4F1KEuTSbg4wN2OJpEIVn20ggjjiTWy4G
+eFdukVFICzZA6vNBVBMOiSQT/iTJhYVMFtnBdPw9SWWTVc7h5JUheGDIkVp+SSSYiBQAADs=
+
+------=_NextPart_000_00A0_01C9C33A.27EB6EB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSlides/AdditionalOperations_files/_7092_tex2html_wrap1365.gif
+
+R0lGODlhCgAKAIAAAAAAAP///yH5BAEAAAEALAAAAAAKAAoAAAIWRI4Ba8mMXjNLVTsvxPbQF0mJ
+d41LAQA7
+
+------=_NextPart_000_00A0_01C9C33A.27EB6EB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSlides/AdditionalOperations_files/_7092_displaymath1316.gif
+
+R0lGODlhawERAIAAAAAAAP///yH5BAEAAAEALAAAAABrAREAAAL+jI+py+0Po5y02osdyLz7323g
+SJYkgKaqyUKokbbyPL/0jZt2sOdy3/MxRIkgyFgTKpeUHZLpIcKk0EMwpqPSntWuz6n1Yq5iBJZ3
+PoVr67I7a22/I8BVnKiy5fFg0cvohya4gFXIp2eHdriSZrdnJjcnyQE2aSZRBxOnqWjoGKg4NXgZ
+OnoXY2glaqo3hbja2plpSftRWYunIRV7+wfJszr4ClzkGrxJLMxXtAyb6zzq+1tLnXFbnUy4C0ua
+rdqd/OwN3ApI+O3anC3uhA4+jR2PqV6aB4n4eKd9KPqpTBrrH7NiwZ4B6qMljJ9XlTY06xUQmQIu
+8ipKRFhv00KKUMsSenI4DJVEYuxGHgsHENTAld0MhlQlLdzDgAuHRLIYbw+jge1kCjs1kSCyhiMT
+2TtpSta9RELhnVqEr086dfimIr2KM2sDjsZIcgTJlWDYcpy2aT0bFK1am7yifq2XqlM6aHNNrrVI
+8a7eFjfp7Oq7VxLgwIQphUjjrjAuxYxZDN665nHjLgUAADs=
+
+------=_NextPart_000_00A0_01C9C33A.27EB6EB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSlides/AdditionalOperations_files/_7092_figure447.gif
+
+R0lGODlhYgAyAIAAAAAAAP///yH5BAEAAAEALAAAAABiADIAAAL+DI6py+0Po2Sh2ouz3hbwD4ai
+4Y0mV57boYJsCxvxl86kxibVq793VjPxPLni7+TrIGS9ndMYlKka0hQRlnR2bssqt3uJhqxhLRMb
+rRGXued11SJvpSTxWHxdK7xQIPb85mN3ZzNVSEM3NXjox4iz6ALpaDbpOHGJmam5KTnZWSn0ySgK
+SviYFaa2OLgwg2qKIedC2bhSQlob+qhk9KUHh3L7VVd3awW1atfEJMyHR6PDvNO2vHYGjS3Mo2Wd
+C2QsTWfdpZ24Wxv409wdi82lvtWTDmZ7Pr+e9xwMv+221y3pFbtRpWYFxGUDYaFX3woCc5hQYQyJ
+EJVUbHdxIp7eVodY7dEYR1mzju4omhPBsN+QYUcw1pNWRA+4aeOS2WIzb5gyaOTUUWPj5to+ezSf
+FKNXZuhPMzXXCX3ZEOYvMgJL5mNa7B0zSCm1RQPXy+Wubf22Nik71BAuk38OoomTMVYnhgXZQqRb
+yq5DvKD01hXplxa5wIrSEpRLK65FqENWthQ7jZsxxz6z9kL6OFXkn30eJh3nD+c7alqR0i2bj4Jn
+Xqy3JgWUJ+vJzLKpEguK49Tm1K+vAn2t+dtKr8hWzzkKM3k4sIlpz15oXPHiuIQr8bUuXS2n7dy7
+PygAADs=
+
+------=_NextPart_000_00A0_01C9C33A.27EB6EB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSlides/AdditionalOperations_files/_7092_tex2html_wrap1181.gif
+
+R0lGODlhCwAMAIAAAAAAAP///yH5BAEAAAEALAAAAAALAAwAAAIaTICJZst+AItP1jehStmeSTWd
+BYXh1iweuBQAOw==
+
+------=_NextPart_000_00A0_01C9C33A.27EB6EB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSlides/AdditionalOperations_files/_7092_tex2html_wrap1335.gif
+
+R0lGODlhCQAMAIAAAAAAAP///yH5BAEAAAEALAAAAAAJAAwAAAIVjIF5YBfYHIxrxmRvbpDpR3lW
+pjQFADs=
+
+------=_NextPart_000_00A0_01C9C33A.27EB6EB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSlides/AdditionalOperations_files/_7092_tex2html_wrap1337.gif
+
+R0lGODlhJwAMAIAAAAAAAP///yH5BAEAAAEALAAAAAAnAAwAAAJETICJxu3P1DKTAphgqyde70wZ
+9kXgaYUap6IURrKHVJpPvSm53fZrBYTdNLvZR9YZ+mapZg33Wh5HmaewyCSyoMkbpwAAOw==
+
+------=_NextPart_000_00A0_01C9C33A.27EB6EB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSlides/AdditionalOperations_files/_7092_tex2html_wrap1339.gif
+
+R0lGODlhJwAMAIAAAAAAAP///yH5BAEAAAEALAAAAAAnAAwAAAJETICJxu3P1DKTgnZf1vvEXnka
+FIoHCJJk56CtypWnNNZxWLEUDFlbzsP0MJmEJXh8EZOn3UcJdSp8Jt+U8xzKqMNZowAAOw==
+
+------=_NextPart_000_00A0_01C9C33A.27EB6EB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSlides/AdditionalOperations_files/_7092_tex2html_wrap1383.gif
+
+R0lGODlhHgARAIAAAAAAAP///yH5BAEAAAEALAAAAAAeABEAAAJIjI+Ay8oL3ImUmvimTBuH3WTe
+5YwQqHFahZmJurIfOstqSz4jisPn1LD4VrmTyzVLfWI/jsciQV4yzamIRk1eszru0mvlYrkFADs=
+
+------=_NextPart_000_00A0_01C9C33A.27EB6EB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSlides/AdditionalOperations_files/_7092_tex2html_wrap1385.gif
+
+R0lGODlhHAARAIAAAAAAAP///yH5BAEAAAEALAAAAAAcABEAAAJFjI+Am8ygEpwGumNlq5frHWRP
+hJGONUViRZ2K+ppsq63rQrNhe+NyutNhfL4MDOSRpI6lJvE0kg0vvU5V2EFSs1OulFsAADs=
+
+------=_NextPart_000_00A0_01C9C33A.27EB6EB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSlides/AdditionalOperations_files/_7092_tex2html_wrap1345.gif
+
+R0lGODlhBgAHAIAAAAAAAP///yH5BAEAAAEALAAAAAAGAAcAAAILhI8WCrHuFJSxwQIAOw==
+
+------=_NextPart_000_00A0_01C9C33A.27EB6EB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSlides/AdditionalOperations_files/_7092_tex2html_wrap1531.gif
+
+R0lGODlhBgAHAIAAAAAAAP///yH5BAEAAAEALAAAAAAGAAcAAAIMDA5hepbqmkxtoVYAADs=
+
+------=_NextPart_000_00A0_01C9C33A.27EB6EB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSlides/AdditionalOperations_files/_7092_tex2html_wrap1349.gif
+
+R0lGODlhIgAKAIAAAAAAAP///yH5BAEAAAEALAAAAAAiAAoAAAIzjI8GqcsPWwI02llbtrQ75CzV
+BnaBRyqaxISi+Lhu/J3cGeL0WLeb59OlMEGibQii+UwFADs=
+
+------=_NextPart_000_00A0_01C9C33A.27EB6EB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSlides/AdditionalOperations_files/_7092_tex2html_wrap1355.gif
+
+R0lGODlhIQAIAIAAAAAAAP///yH5BAEAAAEALAAAAAAhAAgAAAIojI8GGcsMooROPTXlpPi2Hn2X
+5jWVWJopGa7bE8Yn7LTcZ9NIfmhLAQA7
+
+------=_NextPart_000_00A0_01C9C33A.27EB6EB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSlides/AdditionalOperations_files/_7092_tex2html_wrap1357.gif
+
+R0lGODlhQgALAIAAAAAAAP///yH5BAEAAAEALAAAAABCAAsAAAJTjI9pAOoP42Hy0YrzbHrdDjoM
+1zVkiC4BN44QmyqtBK/tmdTyPYtepKPgEKRh6vOaKGmbGNGV/CF9zR1vKjWqmthizniFfrdknNBs
+EvdiN656VAAAOw==
+
+------=_NextPart_000_00A0_01C9C33A.27EB6EB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSlides/AdditionalOperations_files/_7092_tex2html_wrap1681.gif
+
+R0lGODlhCwALAIAAAAAAAP///yH5BAEAAAEALAAAAAALAAsAAAIXjB8AyMqn1kv0SdkMhjzrDWJb
+skRiVAAAOw==
+
+------=_NextPart_000_00A0_01C9C33A.27EB6EB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSlides/AdditionalOperations_files/_7092_displaymath1317.gif
+
+R0lGODlhwQERAIAAAAAAAP///yH5BAEAAAEALAAAAADBAREAAAL+jI+py+0Po5xUgoqz3rz7D4bM
+JY4JWaZqBrTuq7brTNf2jSOyvRt93kHphKveT3QEKpfMJi05IxKdk6OLh4J+ptSu9wvWAX/a8Ml4
+raFjXLP7DUe2G9P5gmxXvpKkiwwK47GWwrcXd4iYeCe0x0U2knaAF9ao0LcD6FPXGHkmKWUY8ad5
+FmqhxoOqmLcFgRdoeWkSMPlpNmqpKRsbMjhEyvhLa0s8TFG2xUqrvPjEjOzKzOsc7WkHO+1Z/HW9
+7OMdC22RBSobLIlOmg4+Lo3RSef+KX8srq5hH+7MajXugM0uYBdkkQB6A8RJiy91mMTM0/bt3jKF
+xiCZmkinYjz+R/DQXav00ISyjlUQUszDacgcP9W2bWzzB5Qwbh+zEeOYEJJLTH0chpS4S5fGdPlK
+wZR4R+AVR0jbHRWYtOgJpbimQnU6C1qtf0GFyXRJhWAzo/TCpWTYcx25bQYVhpJKEmShiDPJkrMX
+9y28hu/S1lVJst0igxCv1i20l1FZRUvWasyyju6DlcXKvb3qeCi4frPYpc05LBNDyZvp8bSaFO2r
+y6I979WDmnGcQEuxXTQcO+YlvvNgFfTDk3dkKb/S2N7te43x37m9dj03HDjyiWhMMV8efCuWv7K7
+s1jsShUq8JM1u2H5ZKjUILG9u2dBKLAg+cnWYz0UMwrwXKkPfL7/XwF5AA5I4AYCelAAADs=
+
+------=_NextPart_000_00A0_01C9C33A.27EB6EB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSlides/AdditionalOperations_files/_7092_tex2html_wrap1363.gif
+
+R0lGODlhsAAQAIAAAAAAAP///yH5BAEAAAEALAAAAACwABAAAAL5jI+py+0N4pu02otVBGh7nnVf
+mEiOSRpoymogtcavOC9xG6x2Hep464PMZCXQhqHjZYKHI8v5w0EnxOawpsxln9uc9/mNAsPUoahk
+2zFJayOYLO6pLKiPT5kdqe35rTv1F8c2V1H3gpd2skbHdGjVhUZICCkYRnmm1ZQYqSjVaAVaGJq5
+WHl4qcLhFITImbpnh9T6SkuFeVupcauHaSgJ9xvcx9enu8uDXKSs6RosbBy66qJlcmQGPVrKSHNa
+jXVlGD5aS04uE26kiuyHtVmEWghfDmxrKSb/NZWZy6/N3VzmRhR86b7x64dvh6eBCTsdzKXvoURT
+JgoAADs=
+
+------=_NextPart_000_00A0_01C9C33A.27EB6EB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSlides/AdditionalOperations_files/_7092_eqnarray475.gif
+
+R0lGODlh9AERAIAAAAAAAP///yH5BAEAAAEALAAAAAD0AREAAAL+jI+py+0Po5wUgoqz3nzeDobi
+SJbgh6DmBrTuu8ZdK9d2Sd+6lq996NIFU6rAb2dBHZHMw7IJhT55RWbVeCXKes9rN2taVsFRA5dc
+3qbXTXRlKiwOG3CcV/6Nj/Fsxbm/Uwc4yCH45rZ1Jmgo8qU0lxKYdcSI9EdYI/aCiNmJ5ZczpHix
+SfRYCgmDpZrwQfq6UGomKjurokoLabZLo5n7e8q66iT8qUV4aewJhFf7wGlh1Eo6UnksnWQaROs0
+q+yNjes6vruqW849DR5qC2us5D03NU6uHo5ab/4uG3rLh/wo0jIHnH5woXCLhzJ25QpBi0QtG7GG
+/SZaBLev2zr+d58m2cJoseKlXgG/LfQ4zOS7ifUMtnSl8RulhzeSWUMmweBFDDS7HaQ4o2dHbM8S
++ompT6ZAoj+JLmXgjmNMeEfjLWXlD+pKMRjlIGUK055TkzdrlkzqTNwmf3cUETuVNKVYsNPobRRJ
+D6u8UW/zCtObV5tUOkZbfexILmzGuw13xuJreOgeliGjRuwFKljVigIxn4x4LNW/QTZ5MRyaUrFn
+LZrRXm49N187fXs/Cj188l5YryxhBOypE2jq3SsplhSlcdHkyJipcqZa3PNglVzpdn5t1bldx2Uz
+rd2W8edv1ecUy/0F8pzM8k9zW+VZOXnvxsFJMufJdlS/XH2kz+5vJ1ssj2Xmm1r69YebencQyN1a
+jJnzUlbXDOTTbgxd+ApxzMHEzoW8mKZVBByiA4+GEKrHlE8krlibfGPdAx+FfXQnYzVV1ZjgYfzE
+s1+E/yWYjlygiLhNkJCdCEYtB8LY4mwvOpPTbTgCMaUUo1UpRBk0HoKTFVJimUExYKoR2Zg2fEml
+DyhaiaZCZr4JZ5lfxYkDG20ShsmdYdLJZ58JFAAAOw==
+
+------=_NextPart_000_00A0_01C9C33A.27EB6EB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSlides/AdditionalOperations_files/_7092_displaymath1318.gif
+
+R0lGODlhiwERAIAAAAAAAP///yH5BAEAAAEALAAAAACLAREAAAL+jI+py+0Po5y0ImCz3vz2D4Yd
+lpDiiW7AyrYptL7yvMQBS+eH/fKXafDphimekHgkKjW+5HJXAzKcIKNJentqP9Ytdgt+SKlPIU78
+7V3H6bA7umvPyG+3uR5f02/yU5ONF6jQVfbVsico8ncWZHNI8vgD6YhxBMmHGcXowsfZCMR5dhhX
+0peoRbhkGYlIU1ma1RmKwxjb+BNEmhUpS1hJmenReTs4STwZA2xrvAmIeyqYqmR2JQz2qwtaHbxs
+y+1IjJmMu0aqjIUc/gzsi33szB3fCj0kjTSmG18WvD2cy19NmzBwULwVtBarH7pM7kocNGTOmieB
+z/LRe2OPlifkWZ9G5bG4TM+vWhwfUUM2sRm8igEp/iMoDt3CYwVXiaxx6xWsnNncjRMHct5FV+Xy
+hIro7xJPdQlBdfzHUxRUoBlq/TxosNjAh0z1KaSpdadDoNvOPVT6syG1oRhNwoxZ05xSjkw37sLW
+5KVPSaYG5bs6tc8ikcbEGiXsxJDiUR499jr86WPQvmzDXErXVG/SwBLwRtbMzIheXn4545zagHJl
+CkItzFxNzwXmxjkp/Ykg1d/j0Dd7UWls9zEM1bBhEDVcPLki4spHMG/Od05p6NS5VNfx/Lqr6dq7
+s/YuIzv4JQUAADs=
+
+------=_NextPart_000_00A0_01C9C33A.27EB6EB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSlides/AdditionalOperations_files/_7092_tex2html_wrap1371.gif
+
+R0lGODlhQwANAIAAAAAAAP///yH5BAEAAAEALAAAAABDAA0AAAJvjI+py+0M4omUvlvlbVIbH4CT
+qIDAxp3Wd46JtpbthEJf6ObsC82101LRdLfSovIDhoTLjPEpi70ySF5nV+RBe77k7bocascpr/UL
+62YR6i6pSW3DwlifGkfGR+NReJq5JqbzltRxhyWYOHJotlIAADs=
+
+------=_NextPart_000_00A0_01C9C33A.27EB6EB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSlides/AdditionalOperations_files/_7092_tex2html_wrap1373.gif
+
+R0lGODlhWgAKAIAAAAAAAP///yH5BAEAAAEALAAAAABaAAoAAAJmjI8GqcsPo5y0HuAutrz7j2Vh
+9pUPqVTjljjLxrahqY0niSL2mrtsrGsweDZZceiLJGGnRhJJkwVyupkSJ3m5ptQjjXqb7MDOWk97
+I55V1jCMzIVKp2miPPuUo5VhI7D0dxeHNFMAADs=
+
+------=_NextPart_000_00A0_01C9C33A.27EB6EB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSlides/AdditionalOperations_files/_7092_tex2html_wrap1375.gif
+
+R0lGODlhCwAJAIAAAAAAAP///yH5BAEAAAEALAAAAAALAAkAAAIPjANwa8kPI0q0Komfi/sUADs=
+
+------=_NextPart_000_00A0_01C9C33A.27EB6EB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSlides/AdditionalOperations_files/_7092_displaymath1319.gif
+
+R0lGODlhggERAIAAAAAAAP///yH5BAEAAAEALAAAAACCAREAAAL+jI+py+0Po5y02hsB3rx7p31f
+eJDiiaYqCLSuuz5tTNfYHMC2oZcmvgsKhzkSkHgkKmvHJNPES0CX1OoF6AxOrdwONLvq+RDgrvmM
+3drK57bsOwQ31e667xU20mnOF9teNafjpzdIKJUmVkS2B9h2CEGIt5DGuJMkybPXOKFRqEgh9sfw
+UxpVNImjCpNoqGk55ig7VihSSXZpeloCgnu1GDvaMMUplQP7evyqlwx8axTbDDwruyWcwRzN96N9
+rWzhWTsNjljhiayMpQDN20zM3l1MTZUlJ2kfvypqCKkZ0pTv3yp/Ap31m2TwjjhUvAYu0qdqHMCE
+xh5OG7ROoC7AafPc1FNzD5+0fwy/zdB4ilnBdpii4Omh75u5layWhXuYyl+6iMO4mSS2LCHJlCjj
+dQT0cURIlwXV/XSmcCSom1+yWbySbeJJmz6v4mTB6FbYl0VROdyH7ig1bxxu7hzK82TcdpGurjwG
+VyHCddHgpEuJN9nQt72QVlQ7b28MmDrNwg2n0SqLyO4+6bV3EBFEpjQZlyQlL85GxKRLUwq9gW0g
+1NrQHDYNO7ZMFIrt1A7l8bXs3YhZh/K9RDXfjgUAADs=
+
+------=_NextPart_000_00A0_01C9C33A.27EB6EB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSlides/AdditionalOperations_files/_7092_displaymath1320.gif
+
+R0lGODlhWAERAIAAAAAAAP///yH5BAEAAAEALAAAAABYAREAAAL+jI+py+0Po5y02ouz3g/wf3jg
+SJbmuQHqyqLupS6xOyf1i+f6DtU3DzT8QiLU7FYMKpdMjS/ZzEERQ2OyGs1qo88tDhsAl35ir7nJ
+KmO65xO5JVwR4fEiXZ6mTtv8ZXqv8EdnYweoo/aBJHK0OOfBKBQZtghJ2HfJ9ShpWMHGxDmiGDcq
+OmlKOlWph8mqBBWD2FOIBgqCFIIrQxRGVXe1a9kqLAVYJSgnM6v3OAh3vByInOfo2+zJa6oZvTsL
+2529OixulcxwjHUtKAk+2YjN3ssrzV23ST+aC/uufJTvDs4s3LiBoVLF6nBuXTY767w1RNYLko+H
+pwql+9PuCcRSadPa1RNIMKSJfzQiUXLXbyHKQBU/UtrEbGUuCwdhiLw5BuKLFierwfSYkdtEoBxR
+nbxSSxeNpDibOs3AtGAnnWOeWr2a6NOZqFi7elUIhCuQAgA7
+
+------=_NextPart_000_00A0_01C9C33A.27EB6EB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSlides/AdditionalOperations_files/_7092_tex2html_wrap1261.gif
+
+R0lGODlhDAAJAIAAAAAAAP///yH5BAEAAAEALAAAAAAMAAkAAAIWhB+ph7oQYExSvtgczc5gjVlg
+BYZQAQA7
+
+------=_NextPart_000_00A0_01C9C33A.27EB6EB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSlides/AdditionalOperations_files/_7092_tex2html_wrap1251.gif
+
+R0lGODlhCwAJAIAAAAAAAP///yH5BAEAAAEALAAAAAALAAkAAAIUhB+Zh7oQYDTLvWkxtXQ7n4Hf
+UQAAOw==
+
+------=_NextPart_000_00A0_01C9C33A.27EB6EB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSlides/AdditionalOperations_files/_7092_eqnarray492.gif
+
+R0lGODlh9AERAIAAAAAAAP///yH5BAEAAAEALAAAAAD0AREAAAL+jI+py+0Po5y02gWujnn7b3Xg
+SJaUaGposKauB8Ty/NZbjLUlnr/zr7MZeMKiEcKTHVnEIaq5jCaIUKm06rRRn7WtNfsNa59BX2tV
+Fo8PWLW20XY14zAR/e3Ok9Bpk3JKpnfkJSgUd7fDJ4EIxvTFWBgJOBXVNtcneWOHmXkB9cP2BwS4
+mWT61/gASXh1BtopeSn6yjRL61T6GQjrt6kG+XEJloSbQdiBbMwaKuebuoYApKy6xxJKoyIcEr2b
+jG1a7FgMLp4KzMvhLMYJog1+nMysyzyZsswevGvNRs3vWS7uHKWBE4xxO7jPkTN49OzQM4cPHRJ1
+jyJqiuYvIcb+YRuxaaxCR5pHBawEZttY7pxFflviqahX8COXlCQzJqRC0iHCZxIvPlNy65s0bq5O
+yfIW9F4WgzCJLZ2mcOnORA+FoqqFdCSqOVW3khOqcNS1hbmumR0SMJ5RZAC5pq0ZtSXaele19cz3
+EKsoebjm+jqDdq/UWn75mpOqk9xNjlGt2aXaiK3gxoL/5nVZGCvhYThWcu6rdlrnb6D7aszZMa9f
+g+/m7js11eRdUkNl0rwJtSyld4nlsQ0HEdSrpLZgm1YNh5PIzm9x4g449vJVx7+7Gg5BtiPT0TMb
+h3VwFPlQ43o56wM4W05g0y5D/wbstPJ7Ze9RnvB8oiB+jPGD+6/eXN1pDOT233qvjTMdQc75U59j
+rzX4YBr7GUJQemYwByBpYSFlHoNr/VfcVIsUIVsdiX34YIaPDdgSZi0iWIZINmlGI33mnSjhhGaI
+aGGPrlUS0Ujq+XifESW24omOQ85IpIVK3hBLk9tc+OQYRwr4S4VSOpnlllJW2UNPV2LZSQEAOw==
+
+------=_NextPart_000_00A0_01C9C33A.27EB6EB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSlides/AdditionalOperations_files/_7092_tex2html_wrap1381.gif
+
+R0lGODlhLQAKAIAAAAAAAP///yH5BAEAAAEALAAAAAAtAAoAAAI5jI+pAbCvmnQw0jWbnbVviTnU
+6HXaBTLJeR3Zu4ZMi2ilbM34ned2/XsEVzTDsGasHD3LWZMXahQAADs=
+
+------=_NextPart_000_00A0_01C9C33A.27EB6EB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSlides/AdditionalOperations_files/_7092_tex2html_wrap1387.gif
+
+R0lGODlhKwAOAIAAAAAAAP///yH5BAEAAAEALAAAAAArAA4AAAJLjIFpy+2dIliIzRdkxfmeuVFP
+yEFeh5aHOp5VVJLsSnkSds7d7Si9brFxZB9gkZYx4Yy+UC4XhOJsF19qqGltFFWiceb9ir8a2LcA
+ADs=
+
+------=_NextPart_000_00A0_01C9C33A.27EB6EB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSlides/AdditionalOperations_files/_7092_tex2html_wrap1409.gif
+
+R0lGODlhIQAJAIAAAAAAAP///yH5BAEAAAEALAAAAAAhAAkAAAImjI8JkK0LnVnyQHZp3XNizIVa
+J2VmcwVjuFEuw3Lax65oGqtwXAAAOw==
+
+------=_NextPart_000_00A0_01C9C33A.27EB6EB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSlides/AdditionalOperations_files/_7092_tex2html_wrap1405.gif
+
+R0lGODlhKQAMAIAAAAAAAP///yH5BAEAAAEALAAAAAApAAwAAAI/TICJxu3v1DKTAohxPWzvnH2X
+1XwgZHbleILKI6Ut/HYsO8+JrdKxHBntDrgcLEhKFo2ckmWyWxorQCJTsykAADs=
+
+------=_NextPart_000_00A0_01C9C33A.27EB6EB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSlides/AdditionalOperations_files/_7092_tex2html_wrap1447.gif
+
+R0lGODlhBQAKAIAAAAAAAP///yH5BAEAAAEALAAAAAAFAAoAAAINTAB2abiYXGNLuVhhKAA7
+
+------=_NextPart_000_00A0_01C9C33A.27EB6EB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSlides/AdditionalOperations_files/_7092_tex2html_wrap1397.gif
+
+R0lGODlhCwAMAIAAAAAAAP///yH5BAEAAAEALAAAAAALAAwAAAIYTACmi+vtDoIvRUNjrkfNDk3J
+522YdH0FADs=
+
+------=_NextPart_000_00A0_01C9C33A.27EB6EB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSlides/AdditionalOperations_files/_7092_tex2html_wrap1401.gif
+
+R0lGODlhCwAMAIAAAAAAAP///yH5BAEAAAEALAAAAAALAAwAAAIYTACmi+vtDoIvRUNjrgfP3nzJ
+512YeRoFADs=
+
+------=_NextPart_000_00A0_01C9C33A.27EB6EB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSlides/AdditionalOperations_files/_7092_eqnarray502.gif
+
+R0lGODlh9AEpAIAAAAAAAP///yH5BAEAAAEALAAAAAD0ASkAAAL+jI+py+0PH5jA0YgbrXrmD4bi
+SJbmiabqyq1J68axh2x0AMt4bre5DgwKh8SiUeK7LDYW2O04fCqe1MMvJH05nVao9wsOi4s337K7
+VKLHs6s1+VqTsjV4Tc7O6/f88NaQRUMHyOPWBzJI+KZxkrizyGB4OElZadlRp6iFl7l5mWGDSUgn
+CREamUT6ucraykdamhhY6vrYVKcGmNYzi4QrRVsrPEw8ApybJtpZ7KmMe1fiaKvFxWx9je175jz1
+I10rPVgVHes2no2ebi1uXt6d7sHBpFkITc37ngpZz6nu/2+JirwrgrhNw1YhXrx9cez96jHF1jyJ
+DfsBvIiRjUD+TTjWmFkGKZuaYxyBmcg1cmBIXRlbuvTzp8zAeTInHvTnbQtBFwntjNr2MqjQKNRk
+BGOWE8NRUBsjLB0KNarSp3OoIjxqFQtWqVy7GsuKJarNbmA/jC3qNa1aU0LKrn0LNy4Yt3Lr2r2L
+N6/evXz7+v0LOLDgwYQLGz6MOLHixYwbO34MOfKhs1G+IUJGBLPkzTPati0E8eSpjixAj646kS7n
+1ajesJOVktytZjcv21MtMelKrbdZ+05Rpt/HiCyLi3DUa7dZHhZt1256nLnx39TD7tMNq2RZ5Lo5
+8o6EQlD32kwZVT+/vFNy0s3+XNbs3bjlDqrIXQgEUmt99PzitdFONlt8U/k3CmXvmUQWPu/Ep6B9
+CPYHIYCuuRMgeaZQGBJurjn01W7BqYBShCL+15yFHmYVDj/sPXRaayUOyOBwLBoIkoYjKsaOiwbN
+t8lMPu2gUjS0EcRLdj09Y6JSQ954Y1PZrahefkoqlNBKMk0HSkVYAtngHQotU9BxWkLJJH9ODodm
+b8o5dSWYStzXIYONiDfhT2C1+WKZrG3UZmg1oYTbeBJ+tVNpBEZXqJ4QgmYUcAvOxZONYiq6qKQG
+gWgpIpGKkSmlgfEoJBA0igoqm6WGd6qnjnXKoaquLmpEAQA7
+
+------=_NextPart_000_00A0_01C9C33A.27EB6EB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSlides/AdditionalOperations_files/_7092_tex2html_wrap1291.gif
+
+R0lGODlhIQAHAIAAAAAAAP///yH5BAEAAAEALAAAAAAhAAcAAAIghB+pyx0HHoyuNmrks3xlRTnT
+JCJfh2ZqiHJfdLYWWQAAOw==
+
+------=_NextPart_000_00A0_01C9C33A.27EB6EB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSlides/AdditionalOperations_files/_7092_displaymath1321.gif
+
+R0lGODlhlwERAIAAAAAAAP///yH5BAEAAAEALAAAAACXAREAAAL+jI+py+0Po5y02nuA07h7xGXf
+Fy7lCKKmyrbuCwHyTMOGvJ0WzessnuH0ajYgw9hC/ny2pvP5MCpdUwWTIr2ikNxQdRkriqHksjmQ
+dWqDJO+alDilm290fXevfM98zB42B3j3F+NGV6IU+ELIZuU4wXgR2VfW00BI1NYoCMLT6aFIhShn
+WDSaaWeCeDQTl6eaOUkJZdkhpDPUqrp54ymBU9qLKrvb64oapRGc+mnciZyM5iysO+1qncKMreer
+Pftt/Fq8tezMCDR6TQpaznwu1Iwd6l6Hzpu6zrpXRbybDg7wSq5qQfqxuqfrnAiEB58NGZcI3Rsv
+8bxpi3grAkXTeQ07wsrnsFaccQApGfTnYyCTUBI1TuniEQ/CjIVw/dsUcZu+a/d6FlypDKSklOJK
+JilajGiujjktXmqq0ymWci1dCoXaVBZBmCSb8YNXUaYVpEbJucxB0M/ARhK7LeM61tZac7fc8oJr
+Zyndn9WC4Q1r7SWykz4Jl61EdozUkTcehVHjk7E0yY2xRJYs55diKoc7ez5WN1naxYCXtBUtuPRH
+YTWhPuW0KPHn2bTjRqnt0fAIhYA24/4NXPOl4CuyzdIie4Nv4sybV3b+eOFx6BIKAAA7
+
+------=_NextPart_000_00A0_01C9C33A.27EB6EB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSlides/AdditionalOperations_files/_7092_tex2html_wrap1425.gif
+
+R0lGODlhDgAGAIAAAAAAAP///yH5BAEAAAEALAAAAAAOAAYAAAIPTGCpCbjvnmq02hMl06kAADs=
+
+------=_NextPart_000_00A0_01C9C33A.27EB6EB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSlides/AdditionalOperations_files/_7092_eqnarray516.gif
+
+R0lGODlh9AEpAIAAAAAAAP///yH5BAEAAAEALAAAAAD0ASkAAAL+jI+py+0Po5y02ouz3rz7bwGO
+CJbmiabqyrbuCwfATNfpPJLxzvf+Dwx+cMIFUaY7HRvJovMJjUqnOepxaWoysNSu9wsOa7jOq3Z4
+NqbF7Lb7HayRbAY5jlaXM0M6smdph+AHR1hoeMhhVndAR3SHRzbI1NcUOHGXJ6jHuIbo+Qn6qQjY
+x5mJZHShmODYaSrzalrpGlpre2tVmnoKu8jLaWfJSjk8R9uLjJUmidvs/LyDebYKSazArBZ7ip03
+q7l1DC0+Tr4hgumLuv34y8qnrc7d/Q1fX36Pny+Bh8SvHv/IX4dg/loBo5PMWjt7+ho6fGguXBaG
+7tJZHAExo8b+jZd4NMK2iaJIjiRL4kNYCKTJlSxbtukk0aXMmTRXxKyJM6fOnTx7+vwJNKjQoUSL
+Gj2KNKnSpUybOn0KNarUqVSrxqjE5iYFrVa7+iAoT1WSsELIbuXqdalZmwqVjH37BW0EuWmRrlWx
+CgVWel3uzqVbt6hfvW1LkBrWQkvMwQ8YBw66CWGwft0Eih05Bm5lSq30FAzJF9k1gYyF/XtMldrB
+df3O0c27efG5X4dfGTMIkN3ohYx4lQbtGPXPUZoTss4A+3jjOdpqZ8qrEPdoSVwco8MsPOmVLbF0
+nW5tuvssY3N70y4u2vy/sRSZoawOdtfu7FOlZVvnGvskeNKFl3trPlt6693m2zKWfePcZffRF1V+
+3lGjm3WF9edfaIDEYx6E5H1nm4EW/QYOg1LxE5KG4EVEUIcHFSSehWaQaA2MB56nBmmveShijguy
+UBh3F+1lGGAQCLmHjkYK4sJHtIB2WnDXsEXYkUeilBV6icw4xA1SbnkIkGAQ6SOXYr7hZUYFAAA7
+
+------=_NextPart_000_00A0_01C9C33A.27EB6EB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/MyFilesAll/MyFiles/QatarUniv/Courses/Database/CourseSlides/AdditionalOperations_files/cmpt354.gif
+
+R0lGODdhmwCbAPAAAGq5v2q7/ywAAAAAmwCbAAAC/oyPqcvtD6OctNqLs968+w+G4kiW5omm6sq2
+7gvH8kzX9o3n+s73/g8MCofEovGITCqXzKbzCY1Kp9Sq9YrNarfcrvcLDovH5LL5jE6r12wmoF0D
+vOEy+Zz+st/xLP2er+InBxgYoEdYaOiH+PFnqHjI2DGYYGdAKblhWTmHmZmx+VmyGSkK0rloevp4
+6anK4en6KhF6sCc7+5CKYOmY64DquPurS9nJW0sMbFyqXNEr6NzoK32BW007eI0NMcxNkfwtPk7u
+tF3O0IxeTL2+cO4e3wAvD9lef0ePrh+vXs9r758CZvzGYfKHL184fMi03euHEFtEWwVnRZv3UJnC
+mXsZicXqaDBURYmpQJK7KJDTwpTe3PlaZNIjNZTlIk7k1rKVPJo6Gd48qTBgQlKttLkUROqnszdI
+D46UaY+ZQILHWG5cty3WvpWKWNXMWXTfhKem+JEtO9NqOqsvY0rzd/aXN7fVdsXViDRlw7t6+/r9
+Cziw4MGECxs+jDix4sWMGzt+DDmy5MmUK1u+jDmz5s2cO3v+DJpNAQA7
+
+------=_NextPart_000_00A0_01C9C33A.27EB6EB0--
